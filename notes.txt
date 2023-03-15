@@ -1,4 +1,4 @@
-Some things to remember about NASM assembly programming:
+NASM assembly:
 - Global _main and corresponding _main needed in every program
 - Use extern to call functions from other files
 - Datatypes:
@@ -6,7 +6,7 @@ Some things to remember about NASM assembly programming:
     - WORD  w (2 bytes)
     - DWORD d (4 bytes)
     - QWORD q (8 bytes)
-- .data is used for initialize data
+- .data is used for initialized data
 - .bss is used for uninitialized data
 - Function calling
     - Push arguements in left to right order
@@ -16,7 +16,7 @@ Some things to remember about NASM assembly programming:
         - fstp pops number from FPU stack
         - Return value stored in st(0) (Bottom of FPU stack)
     - Return value found in eax register (unless floating point)
-    - ecx and edx also potentially clobbered. Remeber to save and restore when needed (ex. _printf and ecx)
+    - ecx and edx also potentially clobbered. Remember to save and restore when needed (ex. _printf and ecx)
 - Linking and compiling
     - Not sure what -m32 flag does but remember that it exists
     - First compile NASM to .obj/.o output file
